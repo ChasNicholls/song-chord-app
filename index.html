@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css" />
+  <title>🎸 Song Chord App</title>
+</head>
+<body>
+  <h1>🎵 Song Chord Sheet</h1>
+  <textarea id="lyricsInput" placeholder="Type your lyrics with [C]hords here..."></textarea>
+  <select id="keySelect">
+    <option value="C">Key of C</option>
+    <option value="G">Key of G</option>
+    <option value="D">Key of D</option>
+    <option value="A">Key of A</option>
+    <option value="E">Key of E</option>
+    <option value="F">Key of F</option>
+    <option value="Bb">Key of Bb</option>
+  </select>
+  <button onclick="generateChords()">🎹 Auto-Generate Chords</button>
+  <button onclick="renderSong()">🎸 Render Song</button>
+  <button onclick="downloadPDF()">🖨 Export PDF</button>
+  <div id="chordDiagrams"></div>
+  <div id="renderedSong"></div>
+  <script type="module" src="jsPDF/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
